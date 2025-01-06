@@ -20,9 +20,12 @@
     margin: 0;
     padding: 0;
 }
+html{
+    min-height: 100%;
+}
 
 body{
-    height: 100%;
+    min-height: 100%;
     background-color: #141414;
     background-image: url(../imagens/areaInicialIndex.png);
     background-repeat: no-repeat;
@@ -215,6 +218,30 @@ body{
 }
 .aside-itens .logo-profile p{
     display: none;
+}
+
+@media (max-height:740px){
+    .especifc-profile{
+        display:none;
+    }
+
+    .conteudo .conteudo-text{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .conteudo .conteudo-text .text{
+        margin-top: 0px;
+    }
+    .conteudo .conteudo-text a{
+        margin-top: 300px;
+    }
+
+    
+    .conteudo .conteudo-text .linha{
+        display: none;
+    }
 }
 
 @media (max-width:750px) {
