@@ -246,6 +246,21 @@ body{
 
 @media (max-width:750px) {
     
+
+    body{
+        min-height: 100%;
+        background-color: #141414;
+        background-image: url(../imagens/areaInicialIndex.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-clip: border-box;
+        background-position: center center;
+        color: white;
+        font-family: 'Genova';
+        position: relative;
+        
+    }
+    
     /*     ASIDE      */
     
     .header #telasG{
@@ -324,13 +339,13 @@ body{
         align-items: center;
         flex-direction: column;
     }
-    .conteudoMobile img{
+    .conteudoMobile .descricao img{
         width: 110px;
         height: 110px;
         border-radius: 25%;
         margin-bottom: 20px; 
     }
-    .conteudoMobile img:hover{
+    .conteudoMobile .descricao img:hover{
         transform: scale(1.3);
         transition:all 0.2s linear;
     }
@@ -346,7 +361,7 @@ body{
     
     .conteudoMobile .dashboard{
         min-height: 100%;
-        width: 95%;
+        width: 96%;
         background-color: #ffffff;
         border-radius: 0 50px 0 0;
         color: black;
@@ -365,5 +380,46 @@ body{
             margin-left: 0px;
         }
     }
+
+    .conteudoMobile .dashboard{
+        padding: 30px 10px;
+        flex-direction: column;
+    }
+
+    .conteudoMobile .dashboard #titulo{
+        color: #141414;
+        font-size: 15px;
+        font-weight: 550;
+        margin-bottom: 20px;
+    }
+    .conteudoMobile .dashboard .titulo a{
+        display: flex;
+        width: 160px;
+        align-items: center;
+        justify-content: left;
+        text-decoration: none;
+        color: #141414;
+        font-size: 13px;
+        margin-top: 5px;  
+    }
+    .conteudoMobile .dashboard .titulo a:hover{
+        color: var(--cor06);
+        transition: all 0.2s;  
+    }
+
+    .conteudoMobile .dashboard .titulo a img{
+        width: 30px;
+        height: 30px;
+        margin-right: 6px;
+    }
+    .conteudoMobile .dashboard .titulo a#udemy img{
+        width: 20px;
+        height: 30px;
+        margin-left: 5px;
+    }
+    .conteudoMobile .dashboard .titulo a#udemy p{
+        margin-left: 6px;
+    }
+
 
 }
