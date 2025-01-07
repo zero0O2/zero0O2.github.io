@@ -249,16 +249,20 @@ body{
 
     body{
         min-height: 100%;
+        color: white;
+        font-family: 'Genova';
+        position: relative;
+        
+    }
+    
+    .maemobile{
         background-color: #141414;
         background-image: url(../imagens/areaInicialIndex.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-clip: border-box;
         background-position: center center;
-        color: white;
-        font-family: 'Genova';
-        position: relative;
-        
+
     }
     
     /*     ASIDE      */
@@ -363,10 +367,35 @@ body{
         min-height: 100%;
         width: 96%;
         background-color: #ffffff;
-        border-radius: 0 50px 0 0;
         color: black;
-        padding: 20px 20px;
+        border-radius: 0 50px 0 0;
+        overflow: auto;
+        animation: alternate dashboard 3.5s;
+        padding: 30px 10px;
+        flex-direction: column;
+    }
+    
+    @keyframes dashboard {
+        0%{
+            max-height: 0;
+            padding:0px;
+            border-radius: 0 ;
+            overflow: hidden;
+        }
+
+
+        65%{
+            border-radius: 0 ;
         
+        }
+
+
+        100%{
+            min-height: 100%;
+            border-radius: 0 50px 0 0;
+            padding: 30px 10px;
+            overflow: auto;
+        }
     }
     
     @keyframes descricao {
@@ -379,11 +408,6 @@ body{
         100%{
             margin-left: 0px;
         }
-    }
-
-    .conteudoMobile .dashboard{
-        padding: 30px 10px;
-        flex-direction: column;
     }
 
     .conteudoMobile .dashboard #titulo{
