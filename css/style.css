@@ -1,6 +1,38 @@
 
 /* ===== Animações ===== */
 
+@keyframes dashboard {
+    0%{
+        padding:0px;
+        border-radius: 0 ;
+        overflow: hidden;
+    }
+
+    65%{
+        border-radius: 0 ;
+    
+    }
+
+
+    100%{
+        border-radius: 0 50px 0 0;
+        padding: 30px 10px;
+        overflow: auto;
+    }
+}
+
+@keyframes descricao {
+    0%{
+        margin-left: -570px;
+    }
+    30%{
+        margin-left: -570px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+
 @keyframes conteudoText {
     0%{
         left: -300px;
@@ -117,7 +149,7 @@ body{
 .redes-sociais a{
     text-decoration: none;
     color: var(--cor06);
-       
+    
 }
 
 
@@ -207,13 +239,13 @@ body{
 
 .conteudo .conteudo-text a:hover{
     transform: scale(1.1);
-
+    
 }
 
 
 /*            MOBILE             */
 
-.conteudoMobile{
+.conteudoMobile , .Mobile{
     display: none;
 }
 .aside-itens .logo-profile p{
@@ -224,7 +256,7 @@ body{
     .especifc-profile{
         display:none;
     }
-
+    
     .conteudo .conteudo-text{
         display: flex;
         align-items: center;
@@ -237,16 +269,18 @@ body{
     .conteudo .conteudo-text a{
         margin-top: 300px;
     }
-
+    
     
     .conteudo .conteudo-text .linha{
         display: none;
     }
+
+
 }
 
 @media (max-width:750px) {
     
-
+    
     body{
         min-height: 100%;
         color: white;
@@ -262,7 +296,7 @@ body{
         background-size: cover;
         background-clip: border-box;
         background-position: center center;
-
+        
     }
     
     /*     ASIDE      */
@@ -309,7 +343,7 @@ body{
         display: block;
         
     }
-
+    
     .aside-itens .logo-profile p{
         display: flex;
         font-size:20px;
@@ -335,10 +369,10 @@ body{
         margin-top: 0;
         flex-direction: column;
     }
-
+    
     .conteudoMobile .descricao{
         display: flex;
-        min-height: 300px;
+        min-height: 330px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
@@ -353,7 +387,7 @@ body{
         transform: scale(1.3);
         transition:all 0.2s linear;
     }
-
+    
     .conteudoMobile .p{
         font-size: 17px;
         justify-content: center;
@@ -375,40 +409,6 @@ body{
         flex-direction: column;
     }
     
-    @keyframes dashboard {
-        0%{
-            max-height: 0;
-            padding:0px;
-            border-radius: 0 ;
-            overflow: hidden;
-        }
-
-
-        65%{
-            border-radius: 0 ;
-        
-        }
-
-
-        100%{
-            min-height: 100%;
-            border-radius: 0 50px 0 0;
-            padding: 30px 10px;
-            overflow: auto;
-        }
-    }
-    
-    @keyframes descricao {
-        0%{
-            margin-left: -570px;
-        }
-        30%{
-            margin-left: -570px;
-        }
-        100%{
-            margin-left: 0px;
-        }
-    }
 
     .conteudoMobile .dashboard #titulo{
         color: #141414;
@@ -444,6 +444,72 @@ body{
     .conteudoMobile .dashboard .titulo a#udemy p{
         margin-left: 6px;
     }
+    
+    .Mobile{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    
+    .Mobile .projetos{
+        background-color: black;
+        width: 100%;
+        height: auto;
+        padding: 70px 20px;
+        display: flex;
+        justify-content: left;
+        flex-direction: column;
+        gap: 60px 0;
+        align-items: center;
+    }
 
+    .Mobile .projetos p{
+        font-size: 30px;
+        font-family: Adam;
+    }
+    
+    .Mobile .projetos .projeto{
+        display: flex;
+        justify-content: space-between;
+        gap: 0 10px;
+    }
 
+    .Mobile .projetos .projeto div{
+        display: flex;
+        flex-direction: column;
+        gap: 8px 0;
+    }
+    
+    .Mobile .projetos .projeto div .tituloprojeto{
+        font-size: 20px;
+        font-weight: 500;
+        color: white;
+    }
+    
+    .Mobile .projetos .projeto div a{
+        text-decoration: none;
+
+    }
+    .Mobile .projetos .projeto div a:hover{
+        text-decoration: underline;
+        color: #fff;
+
+    }
+
+    .Mobile .projetos .projeto div p{
+        font-size: 16px;
+        font-weight: 200;
+        font-family: 'Genova';
+    }
+    .Mobile .projetos .projeto .img{
+        display: flex;
+        align-items: center;
+        
+    }
+    .Mobile .projetos .projeto img{
+        width: 140px;
+        border-radius: 8px;
+        
+    }
+    
 }
